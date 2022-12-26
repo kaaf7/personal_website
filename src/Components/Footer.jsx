@@ -5,8 +5,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 100vw;
-  height: 20vh;
-  background-color: #f3e1fa;
+  height: 10vh;
 `;
 const Footer = () => {
   return <Container></Container>;
