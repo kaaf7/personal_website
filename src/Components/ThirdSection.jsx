@@ -10,8 +10,8 @@ const Container = styled.div`
   justify-content: flex-start;
   align-items: center;
   overflow: hidden;
-  border-bottom: 1px solid lightgrey;
-  background-color: #cdf0ea;
+  background-color: #ffda2d;
+  border-bottom: .5vh solid black;
 `;
 const TextContainer = styled.div`
   display: flex;
@@ -20,12 +20,15 @@ const TextContainer = styled.div`
   align-items: center;
   height: 100%;
   width: 50%;
+  margin-right: 7vw;
   overflow: hidden;
 `;
 const Text = styled.h1`
   color: black;
   font-size: 8vh;
   margin: 0;
+  font-family: "Fredoka One", cursive, sans-serif;
+
 `;
 
 const Wrapper = styled.div`
@@ -35,13 +38,12 @@ const Wrapper = styled.div`
   align-items: flex-end;
   flex: 1;
   overflow: hidden;
-  background-color: #cdf0ea;
 `;
 
 const WelcomImage = styled.img`
   overflow: hidden;
   margin-top: 10vh;
-  transform: scale(0.95);
+  transform: scale(0.6);
 `;
 const ThirdSection = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -55,8 +57,8 @@ const ThirdSection = () => {
         scrollTrigger: {
           trigger: ".thirdSectionContainer",
           markers: false,
-          start: "-300px 500px",
-          end: "100px top",
+          start: "-800px 500px",
+          end: "0px top",
           scrub: true,
         },
         ease: "sine.inOut",
