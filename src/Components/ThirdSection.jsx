@@ -1,6 +1,7 @@
-import React from "react";
+import { React, useEffect } from "react";
 import styled from "styled-components";
 import img from "../assets/Upper_Section.png";
+import { gsap, ScrollTrigger } from "gsap/all";
 
 const Container = styled.div`
   height: 80vh;
@@ -10,7 +11,7 @@ const Container = styled.div`
   align-items: center;
   overflow: hidden;
   border-bottom: 1px solid lightgrey;
-
+  background-color: #cdf0ea;
 `;
 const TextContainer = styled.div`
   display: flex;
@@ -29,26 +30,60 @@ const Text = styled.h1`
 
 const Wrapper = styled.div`
   position: relative;
-  background-color: white;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   flex: 1;
   overflow: hidden;
+  background-color: #cdf0ea;
 `;
 
 const WelcomImage = styled.img`
   overflow: hidden;
   margin-top: 10vh;
-  transform: scale(.95);
+  transform: scale(0.95);
 `;
 const ThirdSection = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    let sectionAnimation = gsap.context(() => {
+      gsap.from(".thirdSectionText", {
+        duration: 20,
+        x: 500,
+        y: 700,
+        scrollTrigger: {
+          trigger: ".thirdSectionContainer",
+          markers: false,
+          start: "-300px 500px",
+          end: "100px top",
+          scrub: true,
+        },
+        ease: "sine.inOut",
+      });
+
+      gsap.to(".thirdSectionImage", {
+        duration: 1.5,
+        y: -40,
+        repeat: -1,
+        yoyo: true,
+        scrollTrigger: {
+          trigger: ".thirdSectionContainer",
+          start: "top bottom",
+          toggleActions: "play pause play pause",
+        },
+        ease: "sine.inOut",
+      });
+    });
+    return () => sectionAnimation.revert();
+  }, []);
+
   return (
-    <Container>
-      <Wrapper>
+    <Container className="thirdSectionContainer">
+      <Wrapper className="thirdSectionImage">
         <WelcomImage src={img}></WelcomImage>
       </Wrapper>
-      <TextContainer>
+      <TextContainer className="thirdSectionText">
         <Text>IM A FRONTEND DEV</Text>
         <Text>AND HERE IS MY WORK</Text>
       </TextContainer>
