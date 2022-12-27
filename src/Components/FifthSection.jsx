@@ -1,9 +1,9 @@
-import React from "react";
+import { React, useEffect } from "react";
 import styled from "styled-components";
 import img from "../assets/Lower_Section_2.png";
-
+import { gsap, ScrollTrigger } from "gsap/all";
 const Container = styled.div`
-  height: 100vh;
+  height: 95vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -37,17 +37,35 @@ const Wrapper = styled.div`
 `;
 
 const WelcomImage = styled.img`
+  margin-top: 0vh;
   overflow: hidden;
-  transform: scale(.8);
+  transform: scale(0.8);
   z-index: 9999;
-  position: relative;
 `;
 const FifthSection = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    let sectionAnimation = gsap.context(() => {
+      gsap.from(".fifthSectionImage", {
+        duration: 20,
+        scale: .5,
+        scrollTrigger: {
+          trigger: ".fifthSectionImage",
+          markers: true,
+          start: "-100px 200px",
+          end: "-62px 100px",
+          scrub: true,
+        },
+      });
+    });
+    return () => sectionAnimation.revert();
+  }, []);
+
   return (
     <Container>
-      <Text>Let's Work Together</Text>
       <Wrapper>
-        <WelcomImage src={img}></WelcomImage>
+        <WelcomImage className="fifthSectionImage" src={img}></WelcomImage>
       </Wrapper>
     </Container>
   );
