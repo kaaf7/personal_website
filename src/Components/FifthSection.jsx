@@ -3,22 +3,17 @@ import styled from "styled-components";
 import img from "../assets/Lower_Section_2.png";
 import { gsap, ScrollTrigger } from "gsap/all";
 const Container = styled.div`
-  height: 95vh;
+  height: 70vh;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
   overflow: hidden;
   position: relative;
+  background-color: #cdf0ea;
 `;
-const TextContainer = styled.div`
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  overflow: hidden;
-`;
+
 const Text = styled.h1`
   color: black;
   font-size: 15vh;
@@ -27,20 +22,24 @@ const Text = styled.h1`
 
 const Wrapper = styled.div`
   width: 100%;
+  height: 100%;
   position: relative;
-  background-color: white;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-end;
   flex: 1;
-  overflow: hidden;
+  overflow: hidden; 
+  background-color: #cdf0ea;
+
+
 `;
 
 const WelcomImage = styled.img`
   margin-top: 0vh;
   overflow: hidden;
-  transform: scale(0.8);
+  transform: scale(1);
   z-index: 9999;
+  transform-origin: bottom;
 `;
 const FifthSection = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -49,10 +48,10 @@ const FifthSection = () => {
     let sectionAnimation = gsap.context(() => {
       gsap.from(".fifthSectionImage", {
         duration: 20,
-        scale: .5,
+        scale: .7,
         scrollTrigger: {
           trigger: ".fifthSectionImage",
-          markers: true,
+          markers: false,
           start: "-100px 200px",
           end: "-62px 100px",
           scrub: true,
