@@ -3,12 +3,15 @@ import styled from "styled-components";
 import img from "../assets/Inroduction_flip.png";
 import { gsap, ScrollTrigger } from "gsap/all";
 const Container = styled.div`
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
   overflow: hidden;
+  background-color: #caf7e3;
+  border-bottom: .5vh solid black;
+
 `;
 const Wrapper = styled.div`
   width: 100%;
@@ -22,7 +25,7 @@ const Wrapper = styled.div`
 const WelcomImage = styled.img`
   margin-top: 12vh;
   overflow: hidden;
-  transform: scale(1.2);
+  transform: scale(1);
 `;
 const TextContainer = styled.div`
   display: flex;
@@ -37,6 +40,8 @@ const TextContainer = styled.div`
 const Text = styled.h1`
   color: black;
   font-size: 15vh;
+  font-family: "Fredoka One", cursive, sans-serif;
+
   margin: 0px;
 `;
 const SecondSection = () => {
@@ -45,14 +50,17 @@ const SecondSection = () => {
   // create a ref for the root level element (for scoping)
   useEffect(() => {
     let sectionAnimation = gsap.context(() => {
-      gsap.from(".secondSectionText", {
-        duration: 10000,
-        x: -100,
+
+      
+      gsap.to(".secondSectionText", {
+        duration: 20,
+        x: -200,
+        y:700,
         scrollTrigger: {
           trigger: ".secondSectionContainer",
           markers: false,
-          start: "-100px 200px",
-          end: "101px 100px",
+          start: "200px 200px",
+          end: "bottom top",
           scrub: true,
         },ease: "sine.inOut",
       });
@@ -73,7 +81,7 @@ const SecondSection = () => {
   return (
     <Container className="secondSectionContainer">
       <TextContainer className="secondSectionText">
-        <Text>IM </Text>
+        <Text>I'M </Text>
         <Text>KARIM</Text>
       </TextContainer>
       <Wrapper>
