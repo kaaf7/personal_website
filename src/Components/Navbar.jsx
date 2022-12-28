@@ -88,16 +88,16 @@ const Navbar = () => {
         <RightItems>
         <NavbarItem>
             <IconContainer>
-              <LinkedInIcon></LinkedInIcon>Linkedin
+              <LinkedInIcon sx={{marginRight:".2vw"}}></LinkedInIcon>Linkedin
             </IconContainer>
           </NavbarItem>
           <NavbarItem>
             
             <IconContainer>
-              <GitHubIcon></GitHubIcon>GitHub
+              <GitHubIcon sx={{marginRight:".2vw"}}></GitHubIcon>GitHub
             </IconContainer>
           </NavbarItem>
-          <NavbarItem>Portfolio</NavbarItem>
+          <NavbarItem>Projects</NavbarItem>
           <NavbarItem>About</NavbarItem>
           <NavbarItem>Contact</NavbarItem>
         </RightItems>
