@@ -124,7 +124,7 @@ const FirstSection = () => {
         },
       });
       gsap.to(".cloud", {
-        duration: 20,
+        duration: 10,
         x: -100,
       });
 
