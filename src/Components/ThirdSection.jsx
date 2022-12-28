@@ -5,7 +5,7 @@ import { gsap, ScrollTrigger } from "gsap/all";
 import Technologies from "./Technologies";
 
 const Container = styled.div`
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: flex-start;
