@@ -9,9 +9,12 @@ const Container = styled.div`
   justify-content: center;
   align-items: flex-end;
   overflow: hidden;
-  background-color: #caf7e3;
-  border-bottom: .5vh solid black;
-
+  transition: 0.5s;
+  border-bottom: 0.5vh solid black;
+  /* :hover {
+    transition: 0.5s;
+    background-color: #caf7e3;
+  } */
 `;
 const Wrapper = styled.div`
   width: 100%;
@@ -50,19 +53,18 @@ const SecondSection = () => {
   // create a ref for the root level element (for scoping)
   useEffect(() => {
     let sectionAnimation = gsap.context(() => {
-
-      
       gsap.to(".secondSectionText", {
         duration: 20,
         x: -200,
-        y:700,
+        y: 700,
         scrollTrigger: {
           trigger: ".secondSectionContainer",
           markers: false,
           start: "200px 200px",
           end: "bottom top",
           scrub: true,
-        },ease: "sine.inOut",
+        },
+        ease: "sine.inOut",
       });
       gsap.from(".secondSectionImage", {
         duration: 20,
@@ -73,7 +75,8 @@ const SecondSection = () => {
           start: "-200px 200px",
           end: "bottom top",
           scrub: true,
-        },ease: "sine.inOut",
+        },
+        ease: "sine.inOut",
       });
     });
     return () => sectionAnimation.revert();
