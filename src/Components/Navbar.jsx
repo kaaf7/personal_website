@@ -29,14 +29,17 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `;
 
-const NavbarItem = styled.h3`
+const NavbarItem = styled.button`
   margin-left: 2vh;
   margin-right: 2vh;
+  width: 10vh;
+  height: 5vh;
   font-weight: 20;
+  justify-content: center;
   font-family: "Fredoka One", sans-serif;
-  border-radius: 10%;
-  padding: 0.5vw;
+  border-radius: 1vh;
   border: 0.1px solid lightgrey;
+  background: none;
   cursor: pointer;
 `;
 const Logo = styled.h1`
