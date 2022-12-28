@@ -6,7 +6,7 @@ import { gsap, ScrollTrigger } from "gsap/all";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 
 const Container = styled.div`
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   align-items: flex-end;
