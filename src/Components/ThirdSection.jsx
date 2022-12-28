@@ -10,8 +10,13 @@ const Container = styled.div`
   justify-content: flex-start;
   align-items: center;
   overflow: hidden;
-  background-color: #ffda2d;
-  border-bottom: .5vh solid black;
+  transition: 0.5s;
+
+  border-bottom: 0.5vh solid black;
+  /* :hover {
+    transition: 0.5s;
+    background-color: #ffda2d;
+  } */
 `;
 const TextContainer = styled.div`
   display: flex;
@@ -28,7 +33,6 @@ const Text = styled.h1`
   font-size: 8vh;
   margin: 0;
   font-family: "Fredoka One", cursive, sans-serif;
-
 `;
 
 const Wrapper = styled.div`
