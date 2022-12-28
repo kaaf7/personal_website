@@ -3,7 +3,7 @@ import styled from "styled-components";
 import img from "../assets/Lower_Section_2.png";
 import { gsap, ScrollTrigger } from "gsap/all";
 const Container = styled.div`
-  height: 70vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
