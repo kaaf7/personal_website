@@ -5,7 +5,7 @@ import { gsap, ScrollTrigger } from "gsap/all";
 const Container = styled.div`
   height: 8vh;
   // background: #50e3fd;
-  background-color: #f9f9f9;
+  //background-color: #f9f9f9;
   text-align: center;
   display: flex;
   align-items: center;
