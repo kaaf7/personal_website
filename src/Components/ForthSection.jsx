@@ -41,11 +41,9 @@ const TextContainer = styled.div`
   width: 50%;
   margin-top: 0px;
   margin-right: 4vw;
-
-
 `;
 const Text = styled.p`
-    font-family: "Fredoka One", cursive, sans-serif;
+  font-family: "Fredoka One", cursive, sans-serif;
 `;
 
 const ForthSection = ({
