@@ -21,7 +21,7 @@ const Home = () => {
         laptop={"laptopA"}
         phone={"phoneA"}
         text={"textA"}
-        color={"#f6dfeb"}
+        
       ></ForthSection>
       <ForthSection
         container={"containerB"}
@@ -30,7 +30,7 @@ const Home = () => {
         laptop={"laptopB"}
         phone={"phoneB"}
         text={"textB"}
-        color={" #ffda2d"}
+    
       ></ForthSection>
       <FifthSection />
     </div>
