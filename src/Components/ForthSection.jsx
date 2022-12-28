@@ -5,6 +5,8 @@ import RightHand from "../assets/Right_Hand.png";
 import Phone from "../assets/Phone.png";
 import LeftHand from "../assets/Left_Hand.png";
 import Laptop from "../assets/Laptop.png";
+import Technologies from "./Technologies";
+
 const Container = styled.div`
   height: 80vh;
   width: 100%;
@@ -14,7 +16,6 @@ const Container = styled.div`
   align-items: center;
   border-bottom: 3px solid black;
   overflow: hidden;
-
 `;
 
 const Wrapper = styled.div`
@@ -43,6 +44,9 @@ const TextContainer = styled.div`
   width: 50%;
   margin-top: 0px;
   margin-right: 4vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 const Text = styled.p`
   font-family: "Fredoka One", cursive, sans-serif;
@@ -170,7 +174,8 @@ const ForthSection = ({
           venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
           Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
           vulputate eleifend tellus. Aenean leo ligula,
-        </Text>
+        </Text>{" "}
+        <Technologies className={text} dimension={70} />
       </TextContainer>
     </Container>
   );
