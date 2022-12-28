@@ -31,7 +31,7 @@ const TextContainer = styled.div`
 const Text = styled.h1`
   color: black;
   font-size: 6vh;
-  width: 100%;
+  width: 90%;
   margin: 0;
   font-family: "Fredoka One", cursive, sans-serif;
 `;
