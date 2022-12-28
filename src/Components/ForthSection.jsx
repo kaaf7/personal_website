@@ -13,6 +13,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   border-bottom: 3px solid black;
+  overflow: hidden;
+
 `;
 
 const Wrapper = styled.div`
