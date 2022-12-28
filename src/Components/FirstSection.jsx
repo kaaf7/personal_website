@@ -3,6 +3,8 @@ import styled from "styled-components";
 import img from "../assets/Lower_Section.png";
 import clouds from "../assets/clouds.png";
 import { gsap, ScrollTrigger } from "gsap/all";
+import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
+
 const Container = styled.div`
   height: 90vh;
   width: 100%;
@@ -21,6 +23,7 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100%;
   width: 15%;
   margin-right: 20vh;
@@ -33,10 +36,10 @@ const Text = styled.h1`
   color: black;
   font-size: 20vh;
   position: relative;
+  margin-bottom: 10vh;
   background-color: none;
   font-family: "Fredoka One", cursive, sans-serif;
-    z-index: 1;
-
+  z-index: 1;
 `;
 
 const Wrapper = styled.div`
@@ -76,9 +79,9 @@ const FirstSection = () => {
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     let sectionAnimation = gsap.context(() => {
-      gsap.to(".Text", {
+      gsap.to(".arrow", {
         duration: 1.5,
-        y: -40,
+        y: -20,
         repeat: -1,
         yoyo: true,
         scrollTrigger: {
@@ -151,6 +154,9 @@ const FirstSection = () => {
       </Wrapper>
       <TextContainer className="Text">
         <Text>Hi</Text>
+        <KeyboardDoubleArrowDownIcon className="arrow"
+          sx={{ transform: "scale(10)" }}
+        ></KeyboardDoubleArrowDownIcon>
       </TextContainer>
     </Container>
   );
