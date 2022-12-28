@@ -36,11 +36,18 @@ const NavbarItem = styled.button`
   height: 5vh;
   font-weight: 20;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   font-family: "Fredoka One", sans-serif;
   border-radius: 1vh;
   border: 0.1px solid lightgrey;
   background: none;
+  transition: .5s;
   cursor: pointer;
+  :hover {
+    transform: scale(1.1);
+    transition: .5s;
+  }
 `;
 const Logo = styled.h1`
   margin-left: 2vh;
@@ -89,15 +96,14 @@ const Navbar = () => {
       <Wrapper>
         <Logo>KARIM.</Logo>
         <RightItems>
-        <NavbarItem>
+          <NavbarItem>
             <IconContainer>
-              <LinkedInIcon sx={{marginRight:".2vw"}}></LinkedInIcon>Linkedin
+              <LinkedInIcon sx={{ marginRight: ".2vw" }}></LinkedInIcon>Linkedin
             </IconContainer>
           </NavbarItem>
           <NavbarItem>
-            
             <IconContainer>
-              <GitHubIcon sx={{marginRight:".2vw"}}></GitHubIcon>GitHub
+              <GitHubIcon sx={{ marginRight: ".2vw" }}></GitHubIcon>GitHub
             </IconContainer>
           </NavbarItem>
           <NavbarItem>Projects</NavbarItem>
