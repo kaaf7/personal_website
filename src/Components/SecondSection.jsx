@@ -3,7 +3,7 @@ import styled from "styled-components";
 import img from "../assets/Inroduction_flip.png";
 import { gsap, ScrollTrigger } from "gsap/all";
 const Container = styled.div`
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
