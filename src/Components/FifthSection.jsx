@@ -11,7 +11,7 @@ const Container = styled.div`
   align-items: center;
   overflow: hidden;
   position: relative;
-  background-color: #cdf0ea;
+  /* background-color: #cdf0ea; */
 `;
 
 const Text = styled.h1`
@@ -29,7 +29,7 @@ const Wrapper = styled.div`
   align-items: flex-end;
   flex: 1;
   overflow: hidden; 
-  background-color: #cdf0ea;
+  /* background-color: #cdf0ea; */
 
 
 `;
