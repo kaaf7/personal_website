@@ -8,7 +8,7 @@ import Laptop from "../assets/Laptop.png";
 import Technologies from "./Technologies";
 
 const Container = styled.div`
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -60,6 +60,7 @@ const ForthSection = ({
   phone,
   text,
   color,
+  
 }) => {
   // register ScrollTrigger
   gsap.registerPlugin(ScrollTrigger);
@@ -134,7 +135,9 @@ const ForthSection = ({
         },
         ease: "sine.inOut",
       });
+      
     });
+
     return () => sectionAnimation.revert();
   }, []);
 
@@ -163,8 +166,8 @@ const ForthSection = ({
           top={"20vh"}
         ></Image>
       </Wrapper>{" "}
-      <TextContainer>
-        <Text className={text}>
+      <TextContainer className={text}>
+        <Text >
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
           et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
@@ -175,7 +178,7 @@ const ForthSection = ({
           Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
           vulputate eleifend tellus. Aenean leo ligula,
         </Text>{" "}
-        <Technologies className={text} dimension={70} />
+        <Technologies dimension={70} />
       </TextContainer>
     </Container>
   );
