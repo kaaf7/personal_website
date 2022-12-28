@@ -1,14 +1,20 @@
 import { React, useEffect } from "react";
 import styled from "styled-components";
 import img from "../assets/Lower_Section.png";
+import clouds from "../assets/clouds.png";
 import { gsap, ScrollTrigger } from "gsap/all";
 const Container = styled.div`
   height: 90vh;
   width: 100%;
   display: flex;
   align-items: flex-end;
-  border-bottom: .5vh solid black;
-  background-color: #f6dfeb;
+  border-bottom: 0.5vh solid black;
+  transition: 0.5s;
+
+  /* :hover {
+    transition: 0.5s;
+    background-color: #f6dfeb;
+  } */
 `;
 
 const TextContainer = styled.div`
@@ -21,6 +27,7 @@ const TextContainer = styled.div`
   position: relative;
   overflow: hidden;
   background-color: none;
+  z-index: 1;
 `;
 const Text = styled.h1`
   color: black;
@@ -28,6 +35,8 @@ const Text = styled.h1`
   position: relative;
   background-color: none;
   font-family: "Fredoka One", cursive, sans-serif;
+    z-index: 1;
+
 `;
 
 const Wrapper = styled.div`
@@ -48,6 +57,19 @@ const WelcomImage = styled.img`
   align-items: flex-end;
   overflow: hidden;
   overflow-x: hidden;
+  z-index: 3;
+`;
+const Cloud = styled.img`
+  overflow: hidden;
+  transform: scale(0.7);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  overflow-x: hidden;
+  top: 0;
+  z-index: 2;
 `;
 
 const FirstSection = () => {
@@ -70,7 +92,7 @@ const FirstSection = () => {
       gsap.to(".Text", {
         duration: 20,
         x: 100,
-        y:-400,
+        y: -400,
         scrollTrigger: {
           trigger: ".firstSectionContainer",
           markers: false,
@@ -89,6 +111,21 @@ const FirstSection = () => {
           end: "bottom top",
           scrub: true,
         },
+      });
+      gsap.to(".cloud", {
+        duration: 20,
+        x: 200,
+        scrollTrigger: {
+          trigger: ".firstSectionContainer",
+          markers: false,
+          start: "200px 200px",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+      gsap.to(".cloud", {
+        duration: 20,
+        x: -100,
       });
 
       gsap.to(".backGround", {
@@ -110,6 +147,7 @@ const FirstSection = () => {
     <Container className="firstSectionContainer">
       <Wrapper>
         <WelcomImage className="Image" src={img}></WelcomImage>
+        <Cloud className="cloud" src={clouds}></Cloud>
       </Wrapper>
       <TextContainer className="Text">
         <Text>Hi</Text>
