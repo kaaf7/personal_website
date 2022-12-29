@@ -1,7 +1,6 @@
 import { React, useEffect } from "react";
 import styled from "styled-components";
 import img from "../assets/Lower_Section.png";
-import clouds from "../assets/clouds.png";
 import { gsap, ScrollTrigger } from "gsap/all";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 
@@ -10,13 +9,9 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   align-items: flex-end;
-  border-bottom: 0.5vh solid black;
+  background-color: #efefef;
+  border-bottom: 0.5vh solid #313131;
   transition: 0.5s;
-
-  /* :hover {
-    transition: 0.5s;
-    background-color: #f6dfeb;
-  } */
 `;
 
 const TextContainer = styled.div`
@@ -33,7 +28,7 @@ const TextContainer = styled.div`
   z-index: 1;
 `;
 const Text = styled.h1`
-  color: black;
+  color: #313131;
   font-size: 20vh;
   position: relative;
   margin-bottom: 10vh;
@@ -61,18 +56,6 @@ const WelcomImage = styled.img`
   overflow: hidden;
   overflow-x: hidden;
   z-index: 3;
-`;
-const Cloud = styled.img`
-  overflow: hidden;
-  transform: scale(0.7);
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  overflow: hidden;
-  overflow-x: hidden;
-  top: 0;
-  z-index: 2;
 `;
 
 const FirstSection = () => {
@@ -126,10 +109,6 @@ const FirstSection = () => {
           scrub: true,
         },
       });
-      gsap.to(".cloud", {
-        duration: 10,
-        x: -100,
-      });
 
       gsap.to(".backGround", {
         duration: 20,
@@ -150,13 +129,13 @@ const FirstSection = () => {
     <Container className="firstSectionContainer">
       <Wrapper>
         <WelcomImage className="Image" src={img}></WelcomImage>
-        <Cloud className="cloud" src={clouds}></Cloud>
       </Wrapper>
       <TextContainer className="Text">
         <Text>Hi</Text>
-        <KeyboardDoubleArrowDownIcon className="arrow"
-          sx={{ transform: "scale(10)" }}
-        ></KeyboardDoubleArrowDownIcon>
+        <KeyboardDoubleArrowDownIcon
+          className="arrow"
+          sx={{ transform: "scale(10)", color: "#313131" }}
+        />
       </TextContainer>
     </Container>
   );
