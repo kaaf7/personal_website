@@ -10,11 +10,8 @@ const Container = styled.div`
   align-items: flex-end;
   overflow: hidden;
   transition: 0.5s;
-  border-bottom: 0.5vh solid black;
-  /* :hover {
-    transition: 0.5s;
-    background-color: #caf7e3;
-  } */
+  background-color: #efefef;
+  border-bottom: 0.5vh solid #313131;
 `;
 const Wrapper = styled.div`
   width: 100%;
@@ -37,11 +34,12 @@ const TextContainer = styled.div`
   align-items: flex-start;
   height: 100%;
   width: 35%;
+
   overflow: hidden;
   margin-left: 6vw;
 `;
 const Text = styled.h1`
-  color: black;
+  color: #313131;
   font-size: 10vh;
   width: 100%;
   font-family: "Fredoka One", cursive, sans-serif;
