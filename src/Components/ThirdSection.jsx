@@ -3,6 +3,7 @@ import styled from "styled-components";
 import img from "../assets/Upper_Section.png";
 import { gsap, ScrollTrigger } from "gsap/all";
 import Technologies from "./Technologies";
+import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 
 const Container = styled.div`
   height: 100vh;
@@ -12,12 +13,8 @@ const Container = styled.div`
   align-items: center;
   overflow: hidden;
   transition: 0.5s;
-
-  border-bottom: 0.5vh solid black;
-  /* :hover {
-    transition: 0.5s;
-    background-color: #ffda2d;
-  } */
+  background-color: #efefef;
+  border-bottom: 0.5vh solid #313131;
 `;
 const TextContainer = styled.div`
   display: flex;
@@ -30,7 +27,7 @@ const TextContainer = styled.div`
   overflow: hidden;
 `;
 const Text = styled.h1`
-  color: black;
+  color: #313131;
   font-size: 6vh;
   width: 90%;
   margin: 0;
@@ -58,8 +55,8 @@ const ThirdSection = () => {
     let sectionAnimation = gsap.context(() => {
       gsap.from(".thirdSectionText", {
         duration: 20,
-        x: 500,
-        y: 700,
+        x: 400,
+        y: 1000,
         scrollTrigger: {
           trigger: ".thirdSectionContainer",
           markers: false,
@@ -82,18 +79,36 @@ const ThirdSection = () => {
         },
         ease: "sine.inOut",
       });
+
+      gsap.to(".arrow", {
+        duration: 1.5,
+        y: -20,
+        repeat: -1,
+        yoyo: true,
+        scrollTrigger: {
+          trigger: ".thirdSectionContainer",
+          start: "top bottom",
+          toggleActions: "play pause play pause",
+        },
+        ease: "sine.inOut",
+      });
     });
     return () => sectionAnimation.revert();
   }, []);
 
   return (
     <Container className="thirdSectionContainer">
-      <Wrapper className="thirdSectionImage">
+      <Wrapper className="">
         <WelcomImage src={img}></WelcomImage>
       </Wrapper>
       <TextContainer className="thirdSectionText">
         <Text>I'M A FRONTEND DEVELOPER</Text>
-        <Technologies dimension="120"></Technologies>
+        <Technologies dimension="100" />
+
+        <KeyboardDoubleArrowDownIcon
+          className="arrow"
+          sx={{ transform: "scale(6)", marginTop: "10vh", color: "#313131" }}
+        />
       </TextContainer>
     </Container>
   );
