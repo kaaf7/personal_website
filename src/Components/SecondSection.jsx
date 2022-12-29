@@ -34,17 +34,19 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
-  width: 25%;
+  width: 35%;
   overflow: hidden;
-  margin-left: 10vw;
+  margin-left: 6vw;
 `;
 const Text = styled.h1`
   color: black;
-  font-size: 15vh;
+  font-size: 10vh;
+  width: 100%;
   font-family: "Fredoka One", cursive, sans-serif;
-
+  display: flex;
+  justify-content: center;
   margin: 0px;
 `;
 const SecondSection = () => {
@@ -85,7 +87,7 @@ const SecondSection = () => {
     <Container className="secondSectionContainer">
       <TextContainer className="secondSectionText">
         <Text>I'M </Text>
-        <Text>KARIM</Text>
+        <Text>KARIM AMER</Text>
       </TextContainer>
       <Wrapper>
         <WelcomImage className="secondSectionImage" src={img}></WelcomImage>
