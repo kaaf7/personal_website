@@ -11,7 +11,7 @@ const Container = styled.div`
   align-items: center;
   overflow: hidden;
   position: relative;
-  /* background-color: #cdf0ea; */
+  background-color: #efefef;
 `;
 
 const Text = styled.h1`
@@ -28,10 +28,7 @@ const Wrapper = styled.div`
   justify-content: flex-end;
   align-items: flex-end;
   flex: 1;
-  overflow: hidden; 
-  /* background-color: #cdf0ea; */
-
-
+  overflow: hidden;
 `;
 
 const WelcomImage = styled.img`
@@ -48,7 +45,7 @@ const FifthSection = () => {
     let sectionAnimation = gsap.context(() => {
       gsap.from(".fifthSectionImage", {
         duration: 20,
-        scale: .7,
+        scale: 0.7,
         scrollTrigger: {
           trigger: ".fifthSectionImage",
           markers: false,
