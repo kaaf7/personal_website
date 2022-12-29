@@ -1,9 +1,7 @@
 import { React, useEffect } from "react";
 import { gsap, ScrollTrigger } from "gsap/all";
 import styled from "styled-components";
-import RightHand from "../assets/Right_Hand.png";
 import Phone from "../assets/Phone.png";
-import LeftHand from "../assets/Left_Hand.png";
 import Laptop from "../assets/Laptop.png";
 import Technologies from "./Technologies";
 
@@ -14,18 +12,19 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 3px solid black;
+  background-color: #efefef;
+  border-bottom: 0.5vh solid #313131;
   overflow: hidden;
 `;
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: 70%;
   height: 50%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 5vh;
 `;
 
 const Image = styled.img`
@@ -41,7 +40,7 @@ const Image = styled.img`
   flex: 1;
 `;
 const TextContainer = styled.div`
-  width: 50%;
+  width: 60%;
   margin-top: 0px;
   margin-right: 4vw;
   display: flex;
@@ -60,7 +59,6 @@ const ForthSection = ({
   phone,
   text,
   color,
-  
 }) => {
   // register ScrollTrigger
   gsap.registerPlugin(ScrollTrigger);
@@ -95,47 +93,28 @@ const ForthSection = ({
       });
 
       gsap.from(`.${laptop}`, {
-        duration: 100,
-        y: 100,
-        scale: 0,
+        duration: 20,
+        x: -400,
         scrollTrigger: {
           trigger: `.${container}`,
           markers: false,
-          start: "200px 500px",
-          end: "100px 200px",
+          start: "-800px 500px",
+          end: "0px top",
           scrub: true,
         },
-        ease: "sine.inOut",
       });
-
       gsap.from(`.${phone}`, {
-        duration: 100,
-        y: 100,
-        scale: 0,
-        scrollTrigger: {
-          trigger: `.${container}`,
-          markers: false,
-          start: "300px 500px",
-          end: "100px 200px",
-          scrub: true,
-        },
-        ease: "sine.inOut",
-      });
+        duration: 20,
+        x: 400,
 
-      gsap.from(`.${text}`, {
-        duration: 100,
-        y: 100,
-        scale: 0,
         scrollTrigger: {
           trigger: `.${container}`,
           markers: false,
-          start: "300px 500px",
-          end: "100px 200px",
+          start: "-800px 500px",
+          end: "0px top",
           scrub: true,
         },
-        ease: "sine.inOut",
       });
-      
     });
 
     return () => sectionAnimation.revert();
@@ -145,29 +124,17 @@ const ForthSection = ({
     <Container style={{ background: `${color}` }} className={container}>
       <Wrapper>
         <Image
-          zIndex={1000}
-          className={leftHand}
-          size={1.2}
-          src={LeftHand}
-          top={"20vh"}
-        ></Image>
-        <Image
           zIndex={1}
           className={laptop}
           left={"6vw"}
-          size={1.6}
+          right={0}
+          size={1.3}
           src={Laptop}
         ></Image>
-        <Image className={phone} left={"5vw"} size={0.6} src={Phone}></Image>
-        <Image
-          className={rightHand}
-          size={1.3}
-          src={RightHand}
-          top={"20vh"}
-        ></Image>
+        <Image className={phone} left={0} size={0.5} src={Phone}></Image>
       </Wrapper>{" "}
       <TextContainer className={text}>
-        <Text >
+        <Text>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
           et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
@@ -178,7 +145,7 @@ const ForthSection = ({
           Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
           vulputate eleifend tellus. Aenean leo ligula,
         </Text>{" "}
-        <Technologies dimension={70} />
+        <Technologies dimension={90} />
       </TextContainer>
     </Container>
   );
