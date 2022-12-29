@@ -6,8 +6,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Container = styled.div`
   height: 10vh;
-  background-color: white;
-  color: #000000;
+  background-color: #fbf9ff;
+  color: #313131;
   position: fixed;
   width: 100%;
   left: 0;
@@ -53,6 +53,7 @@ const Logo = styled.h1`
   margin-left: 2vh;
   margin-right: 2vh;
   font-size: 2.5vw;
+  color: #313131;
   font-family: "Fredoka One", sans-serif;
 `;
 
