@@ -9,7 +9,7 @@ const Container = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
   transition: 0.5s;
@@ -23,15 +23,14 @@ const TextContainer = styled.div`
   align-items: center;
   height: 100%;
   width: 50%;
-  margin-right: 7vw;
+  margin-right: 5vw;
   overflow: hidden;
 `;
 const Text = styled.h1`
   color: #313131;
   font-size: 6vh;
   width: 90%;
-  margin: 0;
-  font-family: "Fredoka One", cursive, sans-serif;
+  font-family: 'Signika', sans-serif;
 `;
 
 const Wrapper = styled.div`
@@ -102,7 +101,7 @@ const ThirdSection = () => {
         <WelcomImage src={img}></WelcomImage>
       </Wrapper>
       <TextContainer className="thirdSectionText">
-        <Text>I'M A FRONTEND DEVELOPER</Text>
+        <Text>I'M A FULLL-STACK DEVELOPER</Text>
         <Technologies dimension="100" />
 
         <KeyboardDoubleArrowDownIcon
