@@ -40,9 +40,9 @@ const TextContainer = styled.div`
 `;
 const Text = styled.h1`
   color: #313131;
-  font-size: 10vh;
+  font-size: 12vh;
   width: 100%;
-  font-family: "Fredoka One", cursive, sans-serif;
+  font-family: 'Signika', sans-serif;
   display: flex;
   justify-content: center;
   margin: 0px;
@@ -85,7 +85,7 @@ const SecondSection = () => {
     <Container className="secondSectionContainer">
       <TextContainer className="secondSectionText">
         <Text>I'M </Text>
-        <Text>KARIM AMER</Text>
+        <Text>KARIM</Text>
       </TextContainer>
       <Wrapper>
         <WelcomImage className="secondSectionImage" src={img}></WelcomImage>
