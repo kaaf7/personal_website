@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
 import styled from "styled-components";
+import ContactImage from "../assets/Contact.png";
 const Container = styled.div`
   height: 100vh;
   width: 100%;
@@ -9,11 +10,10 @@ const Container = styled.div`
   background-color: #efefef;
 `;
 const Wrapper = styled.div`
-  margin-top: 20vh;
-  height: 100%;
   width: 100%;
   display: flex;
-  background-color: #efefef;
+  justify-content: center;
+  background: none;
 `;
 const TextContainer = styled.div`
   width: 70%;
@@ -23,18 +23,19 @@ const TextContainer = styled.div`
 `;
 const Title = styled.h1`
   font-size: 5vh;
+  margin-top: 10vh;
+  margin-bottom: 0;
 `;
 const Text = styled.p``;
 const LeftSection = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   text-align: center;
   margin-left: 5vw;
   height: 100%;
   width: 50%;
-  background-color: yellow;
 `;
 
 const Form = styled.form`
@@ -46,12 +47,13 @@ const Input = styled.input`
   flex: 1;
   min-width: 40%;
   margin: 10px 0;
-  padding: 10px;
+  padding: 1vw;
   font-family: "Lexend", sans-serif;
   &:focus {
     outline: 0.1px solid lightgrey;
   }
 `;
+
 const Button = styled.button`
   width: 40%;
   border: none;
@@ -65,17 +67,19 @@ const Button = styled.button`
 const RightSection = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   text-align: center;
   height: 100%;
   width: 50%;
+  background: none;
 `;
 
 const RightImage = styled.img`
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: scale(0.3);
 `;
 const Contact = () => {
   return (
@@ -94,15 +98,14 @@ const Contact = () => {
             <textarea
               type="text"
               placeholder="Message"
-              style={{
-                height: "40vh",
-                resize: "none",
-              }}
+              style={{ height: "30vh", padding: "1vw", resize: "none" }}
             />
             <Button>SEND</Button>
           </Form>
         </LeftSection>
-        <RightSection></RightSection>
+        <RightSection>
+          <RightImage src={ContactImage} />
+        </RightSection>
       </Wrapper>
     </Container>
   );
