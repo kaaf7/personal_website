@@ -33,7 +33,7 @@ const Text = styled.h1`
   position: relative;
   margin-bottom: 10vh;
   background-color: none;
-  font-family: "Fredoka One", cursive, sans-serif;
+  font-family: 'Signika', sans-serif;
   z-index: 1;
 `;
 
