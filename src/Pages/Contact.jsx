@@ -47,6 +47,7 @@ const Input = styled.input`
   flex: 1;
   min-width: 40%;
   margin: 10px 0;
+  border-radius: 0.5vw;
   padding: 1vw;
   font-family: "Lexend", sans-serif;
   &:focus {
@@ -62,7 +63,9 @@ const Button = styled.button`
   background-color: #13b8ce;
   color: white;
   cursor: pointer;
+  font-size: 2vh;
   margin-top: 1.5vh;
+  border-radius: .5vw;
 `;
 const RightSection = styled.div`
   display: flex;
@@ -79,7 +82,7 @@ const RightImage = styled.img`
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: scale(0.3);
+  transform: scale(0.35);
 `;
 const Contact = () => {
   return (
@@ -98,7 +101,12 @@ const Contact = () => {
             <textarea
               type="text"
               placeholder="Message"
-              style={{ height: "30vh", padding: "1vw", resize: "none" }}
+              style={{
+                height: "30vh",
+                padding: "1vw",
+                resize: "none",
+                borderRadius: " .5vw",
+              }}
             />
             <Button>SEND</Button>
           </Form>
