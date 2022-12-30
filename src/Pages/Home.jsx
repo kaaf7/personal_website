@@ -6,8 +6,9 @@ import ThirdSection from "../Components/ThirdSection";
 import ForthSection from "../Components/ForthSection";
 import FifthSection from "../Components/FifthSection";
 import Footer from "../Components/Footer";
-
 const Home = () => {
+  const ecommUrl = "https://ecomm-frontend-client.onrender.com/";
+
   return (
     <div>
       <Navbar />
@@ -21,7 +22,7 @@ const Home = () => {
         laptop={"laptopA"}
         phone={"phoneA"}
         text={"textA"}
-        
+        dir={ecommUrl}
       ></ForthSection>
       <ForthSection
         container={"containerB"}
@@ -30,7 +31,6 @@ const Home = () => {
         laptop={"laptopB"}
         phone={"phoneB"}
         text={"textB"}
-    
       ></ForthSection>
       <FifthSection />
     </div>
