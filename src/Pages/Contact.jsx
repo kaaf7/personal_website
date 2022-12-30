@@ -71,6 +71,12 @@ const RightSection = styled.div`
   height: 100%;
   width: 50%;
 `;
+
+const RightImage = styled.img`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 const Contact = () => {
   return (
     <Container>
