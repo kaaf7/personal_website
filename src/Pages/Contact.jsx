@@ -13,20 +13,28 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  background: none;
 `;
 const TextContainer = styled.div`
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-left: 1vw;
 `;
 const Title = styled.h1`
-  font-size: 5vh;
+  font-size: 4vh;
   margin-top: 10vh;
   margin-bottom: 0;
+  color: #313131;
+
+  font-family: "Signika", sans-serif;
 `;
-const Text = styled.p``;
+const Text = styled.p`
+  font-family: "Signika", sans-serif;
+  font-size: 1vw;
+  font-weight: 200;
+  color: #313131;
+`;
 const LeftSection = styled.div`
   display: flex;
   flex-direction: column;
@@ -39,6 +47,8 @@ const LeftSection = styled.div`
 `;
 
 const Form = styled.form`
+  margin-left: 1vw;
+
   display: flex;
   flex-direction: column;
   width: 70%;
@@ -46,9 +56,25 @@ const Form = styled.form`
 const Input = styled.input`
   flex: 1;
   min-width: 40%;
+  font-family: "Signika", sans-serif;
   margin: 10px 0;
   border-radius: 0.5vw;
+  border: 0.1px solid lightgrey;
   padding: 1vw;
+  font-family: "Lexend", sans-serif;
+  &:focus {
+    outline: 0.1px solid lightgrey;
+  }
+`;
+const Message = styled.textarea`
+  flex: 1;
+  min-width: 40%;
+  margin: 10px 0;
+  border-radius: 0.5vw;
+  border: 0.1px solid lightgrey;
+  padding: 1vw;
+  min-height: 30vh;
+  resize: none;
   font-family: "Lexend", sans-serif;
   &:focus {
     outline: 0.1px solid lightgrey;
@@ -63,9 +89,10 @@ const Button = styled.button`
   background-color: #13b8ce;
   color: white;
   cursor: pointer;
+  font-family: "Signika", sans-serif;
   font-size: 2vh;
   margin-top: 1.5vh;
-  border-radius: .5vw;
+  border-radius: 0.5vw;
 `;
 const RightSection = styled.div`
   display: flex;
@@ -98,16 +125,7 @@ const Contact = () => {
           <Form>
             <Input placeholder="Name" />
             <Input placeholder="Email" /> <Input placeholder="Subject" />{" "}
-            <textarea
-              type="text"
-              placeholder="Message"
-              style={{
-                height: "30vh",
-                padding: "1vw",
-                resize: "none",
-                borderRadius: " .5vw",
-              }}
-            />
+            <Message type="text" placeholder="Message" />
             <Button>SEND</Button>
           </Form>
         </LeftSection>
