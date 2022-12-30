@@ -1,5 +1,6 @@
 import { React, useEffect } from "react";
 import { gsap, ScrollTrigger } from "gsap/all";
+
 import styled from "styled-components";
 import Phone from "../assets/Phone.png";
 import Laptop from "../assets/Laptop.png";
@@ -48,7 +49,13 @@ const TextContainer = styled.div`
   align-items: center;
 `;
 const Text = styled.p`
-  font-family: "Fredoka One", cursive, sans-serif;
+  font-size: 2vh;
+  font-family: "Signika", sans-serif;
+`;
+const Anchor = styled.a`
+  width: 70%;
+  display: flex;
+  justify-content: center;
 `;
 
 const ForthSection = ({
@@ -59,10 +66,11 @@ const ForthSection = ({
   phone,
   text,
   color,
+  dir,
 }) => {
   // register ScrollTrigger
   gsap.registerPlugin(ScrollTrigger);
-  // create a ref for the root level element (for scoping)
+
   useEffect(() => {
     let sectionAnimation = gsap.context(() => {
       gsap.from(`.${leftHand}`, {
@@ -123,15 +131,30 @@ const ForthSection = ({
   return (
     <Container style={{ background: `${color}` }} className={container}>
       <Wrapper>
-        <Image
-          zIndex={1}
-          className={laptop}
-          left={"6vw"}
-          right={0}
-          size={1.3}
-          src={Laptop}
-        ></Image>
-        <Image className={phone} left={0} size={0.5} src={Phone}></Image>
+        <Anchor href={dir} target="_blank" rel="noreferrer">
+          {" "}
+          <Image
+            alt="react"
+            zIndex={1}
+            className={laptop}
+            left={"22vw"}
+            right={0}
+            size={1.5}
+            src={Laptop}
+          />{" "}
+        </Anchor>
+        <Anchor href={dir} target="_blank" rel="noreferrer">
+          {" "}
+          <Image
+            alt="react"
+            zIndex={1}
+            className={phone}
+            left={0}
+            right={"8vw"}
+            size={0.4}
+            src={Phone}
+          />{" "}
+        </Anchor>
       </Wrapper>{" "}
       <TextContainer className={text}>
         <Text>
