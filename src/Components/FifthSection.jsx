@@ -45,7 +45,7 @@ const FifthSection = () => {
     let sectionAnimation = gsap.context(() => {
       gsap.from(".fifthSectionImage", {
         duration: 20,
-        scale: 0.7,
+        scale: 0.8,
         scrollTrigger: {
           trigger: ".fifthSectionImage",
           markers: false,
