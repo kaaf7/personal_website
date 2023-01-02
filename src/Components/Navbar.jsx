@@ -73,7 +73,7 @@ const IconContainer = styled.div`
   align-items: center;
 `;
 const Navbar = () => {
-  const gitHubLink = "https://github.com/kaaf7"
+  const gitHubLink = "https://github.com/kaaf7";
   const navigate = useNavigate();
   const NavigateDir = (dir) => {
     navigate(dir);
@@ -134,7 +134,13 @@ const Navbar = () => {
               </IconContainer>{" "}
             </a>
           </NavbarItem>
-          <NavbarItem>Projects</NavbarItem>
+          <NavbarItem
+            onClick={() => {
+              NavigateDir("/projects");
+            }}
+          >
+            Projects
+          </NavbarItem>
           <NavbarItem
             onClick={() => {
               NavigateDir("/about");
