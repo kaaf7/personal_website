@@ -158,7 +158,7 @@ const ForthSection = ({
       </Wrapper>{" "}
       <TextContainer className={text}>
         <Text>
-          Bankai. is a high fashio brand
+          Bankai. is a high fashion brand
         </Text>{" "}
         <Technologies dimension={90} />
       </TextContainer>
