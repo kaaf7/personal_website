@@ -2,12 +2,13 @@ import { React, useEffect } from "react";
 import styled from "styled-components";
 import img from "../assets/Lower_Section_2.png";
 import { gsap, ScrollTrigger } from "gsap/all";
+
 const Container = styled.div`
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
   position: relative;
@@ -22,6 +23,7 @@ const Wrapper = styled.div`
   justify-content: flex-end;
   align-items: flex-end;
   overflow: hidden;
+  border-bottom: 0.5vh solid #313131;
 `;
 
 const WelcomImage = styled.img`
@@ -29,40 +31,21 @@ const WelcomImage = styled.img`
   overflow: hidden;
   z-index: 9999;
   transform-origin: bottom;
-  width: 60%;
-  background-color: green;
-  transform: scale(1.4);
+  width: 100%;
+  transform: scale(1.3);
 `;
 
-const ContactMeSection = styled.div`
-  width: 20%;
-  height: 100%;
-  background: yellow;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-direction: row;
-  flex: 1;
-`;
-const IconContainer = styled.div`
-width: 100%;
-height: 10%;
-display: flex;
-background-color: blue;
-`;
 
-const Text = styled.p`
-  color: black;
-  position: absolute;
-`;
+
 const FifthSection = () => {
   gsap.registerPlugin(ScrollTrigger);
+ 
 
   useEffect(() => {
     let sectionAnimation = gsap.context(() => {
       gsap.from(".fifthSectionImage", {
         duration: 20,
-        scale: 1,
+        scale: 0.7,
         scrollTrigger: {
           trigger: ".fifthSectionImage",
           markers: false,
@@ -79,11 +62,6 @@ const FifthSection = () => {
     <Container>
       <Wrapper>
         <WelcomImage className="fifthSectionImage" src={img}></WelcomImage>
-        <ContactMeSection>
-          <IconContainer>
-            <Text>Hi</Text>
-          </IconContainer>
-        </ContactMeSection>
       </Wrapper>
     </Container>
   );
