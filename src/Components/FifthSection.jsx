@@ -14,12 +14,6 @@ const Container = styled.div`
   background-color: #efefef;
 `;
 
-const Text = styled.h1`
-  color: black;
-  font-size: 15vh;
-  position: absolute;
-`;
-
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -27,16 +21,39 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  flex: 1;
   overflow: hidden;
 `;
 
 const WelcomImage = styled.img`
   margin-top: 0vh;
   overflow: hidden;
-  transform: scale(1);
   z-index: 9999;
   transform-origin: bottom;
+  width: 60%;
+  background-color: green;
+  transform: scale(1.4);
+`;
+
+const ContactMeSection = styled.div`
+  width: 20%;
+  height: 100%;
+  background: yellow;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: row;
+  flex: 1;
+`;
+const IconContainer = styled.div`
+width: 100%;
+height: 10%;
+display: flex;
+background-color: blue;
+`;
+
+const Text = styled.p`
+  color: black;
+  position: absolute;
 `;
 const FifthSection = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -45,7 +62,7 @@ const FifthSection = () => {
     let sectionAnimation = gsap.context(() => {
       gsap.from(".fifthSectionImage", {
         duration: 20,
-        scale: 0.8,
+        scale: 1,
         scrollTrigger: {
           trigger: ".fifthSectionImage",
           markers: false,
@@ -62,6 +79,11 @@ const FifthSection = () => {
     <Container>
       <Wrapper>
         <WelcomImage className="fifthSectionImage" src={img}></WelcomImage>
+        <ContactMeSection>
+          <IconContainer>
+            <Text>Hi</Text>
+          </IconContainer>
+        </ContactMeSection>
       </Wrapper>
     </Container>
   );
