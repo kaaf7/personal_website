@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <div>
       <Navbar />
-      <FirstSection fontSize ="8vh" imgsrc={img} text="Projects"></FirstSection>
+      <FirstSection fontSize ="10vh" imgsrc={img} text="Projects"></FirstSection>
       <ForthSection
         container={"containerA"}
         rightHand={"rightHandA"}
@@ -19,6 +19,8 @@ const Projects = () => {
         phone={"phoneA"}
         text={"textA"}
         dir={ecommUrl}
+        horizontalDirection ="900"
+        verticalDirection ="700"
       ></ForthSection>
       <ForthSection
         container={"containerB"}
@@ -27,6 +29,8 @@ const Projects = () => {
         laptop={"laptopB"}
         phone={"phoneB"}
         text={"textB"}
+        horizontalDirection ="-900"
+        verticalDirection ="700"
       ></ForthSection>
       <Footer/>
     </div>
