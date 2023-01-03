@@ -32,9 +32,8 @@ const WelcomImage = styled.img`
   z-index: 9999;
   transform-origin: bottom;
   width: 100%;
-  transform: scale(1.3);
+  transform: scale(1);
 `;
-
 
 
 const FifthSection = () => {
