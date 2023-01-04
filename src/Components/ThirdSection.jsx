@@ -14,32 +14,34 @@ const Container = styled.div`
   overflow: hidden;
   transition: 0.5s;
   background-color: #efefef;
-  border-bottom: 0.5vh solid #313131;
+  border-bottom: 0.1vh solid #313131;
 `;
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 100%;
   width: 50%;
-  margin-right: 5vw;
   overflow: hidden;
+
 `;
 const Text = styled.h1`
   color: #313131;
   font-size: 6vh;
   width: 90%;
-  font-family: 'Signika', sans-serif;
+  font-family: "Signika", sans-serif;
 `;
 
 const Wrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   flex: 1;
   overflow: hidden;
+
 `;
 
 const WelcomImage = styled.img`
@@ -102,8 +104,7 @@ const ThirdSection = () => {
       </Wrapper>
       <TextContainer className="thirdSectionText">
         <Text>I'M A FULLL-STACK DEVELOPER</Text>
-        <Technologies dimension="100" />
-
+        <Technologies dimension="90" />
         <KeyboardDoubleArrowDownIcon
           className="arrow"
           sx={{ transform: "scale(6)", marginTop: "10vh", color: "#313131" }}
