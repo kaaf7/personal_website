@@ -11,7 +11,7 @@ const Container = styled.div`
   overflow: hidden;
   transition: 0.5s;
   background-color: #efefef;
-  border-bottom: 0.5vh solid #313131;
+  border-bottom: 0.1vh solid #313131;
 `;
 const Wrapper = styled.div`
   width: 100%;
@@ -56,7 +56,7 @@ const SecondSection = () => {
       gsap.to(".secondSectionText", {
         duration: 20,
         x: -200,
-        y: 700,
+        y: 850,
         scrollTrigger: {
           trigger: ".secondSectionContainer",
           markers: false,
