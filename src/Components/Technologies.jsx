@@ -79,7 +79,8 @@ import React from "react";
           width ={dimension}
           height={dimension}
         />{" "}
-      </a>
+      </a><a href="https://styled-components.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/styled-components-1.svg" alt="xd" width ={dimension}
+          height={dimension}/> </a>
     </p>
   );
 };
