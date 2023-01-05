@@ -109,7 +109,7 @@ const RightImage = styled.img`
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: scale(0.35);
+  transform: scale(0.30);
 `;
 const Contact = () => {
   return (
