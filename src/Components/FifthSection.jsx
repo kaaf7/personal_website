@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   justify-content: flex-end;
   align-items: flex-end;
   overflow: hidden;
-  border-bottom: 0.5vh solid #313131;
+  border-bottom: 0.1vh solid #313131;
 `;
 
 const WelcomImage = styled.img`
