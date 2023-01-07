@@ -1,9 +1,6 @@
 import { React, useEffect } from "react";
 import { gsap, ScrollTrigger } from "gsap/all";
-
 import styled from "styled-components";
-import Phone from "../assets/Phone.png";
-import Laptop from "../assets/Laptop.png";
 import Technologies from "./Technologies";
 
 const Container = styled.div`
@@ -59,6 +56,8 @@ const Anchor = styled.a`
 `;
 
 const ForthSection = ({
+  laptopImage,
+  phoneImage,
   container,
   leftHand,
   rightHand,
@@ -67,6 +66,9 @@ const ForthSection = ({
   text,
   color,
   dir,
+  description,
+  horizontalDirection,
+  verticalDirection,
 }) => {
   // register ScrollTrigger
   gsap.registerPlugin(ScrollTrigger);
@@ -102,7 +104,8 @@ const ForthSection = ({
 
       gsap.from(`.${laptop}`, {
         duration: 20,
-        x: -400,
+        x: horizontalDirection,
+        y: verticalDirection,
         scrollTrigger: {
           trigger: `.${container}`,
           markers: false,
@@ -113,8 +116,8 @@ const ForthSection = ({
       });
       gsap.from(`.${phone}`, {
         duration: 20,
-        x: 400,
-
+        x: horizontalDirection,
+        y: verticalDirection,
         scrollTrigger: {
           trigger: `.${container}`,
           markers: false,
@@ -140,7 +143,7 @@ const ForthSection = ({
             left={"22vw"}
             right={0}
             size={1.5}
-            src={Laptop}
+            src={laptopImage}
           />{" "}
         </Anchor>
         <Anchor href={dir} target="_blank" rel="noreferrer">
@@ -152,14 +155,12 @@ const ForthSection = ({
             left={0}
             right={"8vw"}
             size={0.4}
-            src={Phone}
+            src={phoneImage}
           />{" "}
         </Anchor>
       </Wrapper>{" "}
       <TextContainer className={text}>
-        <Text>
-          Bankai. is a high fashion brand
-        </Text>{" "}
+        <Text>{description}</Text>{" "}
         <Technologies dimension={90} />
       </TextContainer>
     </Container>
