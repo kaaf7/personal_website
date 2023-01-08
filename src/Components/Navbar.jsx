@@ -69,7 +69,7 @@ const RightItems = styled.div`
 const IconContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 `;
 const Navbar = () => {
@@ -114,11 +114,6 @@ const Navbar = () => {
         </Logo>
         <RightItems>
           <NavbarItem>
-            <IconContainer>
-              <LinkedInIcon sx={{ marginRight: ".2vw" }}></LinkedInIcon>Linkedin
-            </IconContainer>
-          </NavbarItem>
-          <NavbarItem>
             <a
               style={{ color: "black", textDecoration: "none" }}
               href={gitHubLink}
@@ -134,6 +129,17 @@ const Navbar = () => {
               </IconContainer>{" "}
             </a>
           </NavbarItem>
+          <NavbarItem
+            onClick={() => {
+              NavigateDir("/");
+            }}
+          >
+            <IconContainer>
+              Home
+              {/* <LinkedInIcon sx={{ marginRight: ".2vw" }}></LinkedInIcon>Linkedin */}
+            </IconContainer>
+          </NavbarItem>
+
           <NavbarItem
             onClick={() => {
               NavigateDir("/projects");
