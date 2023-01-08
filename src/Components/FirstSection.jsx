@@ -1,6 +1,5 @@
 import { React, useEffect } from "react";
 import styled from "styled-components";
-import img from "../assets/Lower_Section.png";
 import { gsap, ScrollTrigger } from "gsap/all";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 
@@ -10,17 +9,16 @@ const Container = styled.div`
   display: flex;
   align-items: flex-end;
   background-color: #efefef;
-  border-bottom: 0.5vh solid #313131;
+  border-bottom: 0.1vh solid #313131;
   transition: 0.5s;
 `;
-
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 15%;
+  width: 25%;
   margin-right: 20vh;
   position: relative;
   overflow: hidden;
@@ -29,14 +27,13 @@ const TextContainer = styled.div`
 `;
 const Text = styled.h1`
   color: #313131;
-  font-size: 20vh;
+  font-size: ${(props) => props.fontSize};
   position: relative;
   margin-bottom: 10vh;
   background-color: none;
-  font-family: 'Signika', sans-serif;
+  font-family: "Signika", sans-serif;
   z-index: 1;
 `;
-
 const Wrapper = styled.div`
   width: 100%;
   position: relative;
@@ -45,7 +42,6 @@ const Wrapper = styled.div`
   align-items: flex-end;
   overflow: hidden;
 `;
-
 const WelcomImage = styled.img`
   overflow: hidden;
   transform: scale(1);
@@ -58,7 +54,7 @@ const WelcomImage = styled.img`
   z-index: 3;
 `;
 
-const FirstSection = () => {
+const FirstSection = ({ text, imgsrc, fontSize }) => {
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     let sectionAnimation = gsap.context(() => {
@@ -128,10 +124,10 @@ const FirstSection = () => {
   return (
     <Container className="firstSectionContainer">
       <Wrapper>
-        <WelcomImage className="Image" src={img}></WelcomImage>
+        <WelcomImage className="Image" src={imgsrc}></WelcomImage>
       </Wrapper>
       <TextContainer className="Text">
-        <Text>Hi</Text>
+        <Text fontSize={fontSize}>{text}</Text>
         <KeyboardDoubleArrowDownIcon
           className="arrow"
           sx={{ transform: "scale(10)", color: "#313131" }}
