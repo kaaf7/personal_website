@@ -17,6 +17,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 // linkedin icon
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
+// all items container
 const Container = styled.div`
   height: 8vh;
   background-color: #fbf9ff;
@@ -31,7 +32,7 @@ const Container = styled.div`
     height: 4vh;
   }
 `;
-
+// items wrapper
 const Wrapper = styled.div`
   display: flex;
   height: 100%;
@@ -41,7 +42,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
-
+// navbar items
 const NavbarItem = styled.button`
   margin-left: 1vh;
   margin-right: 1vh;
@@ -64,6 +65,7 @@ const NavbarItem = styled.button`
     transition: 0.5s;
   }
 `;
+// logo
 const Logo = styled.h1`
   margin-left: 2vh;
   margin-right: 2vh;
@@ -72,12 +74,13 @@ const Logo = styled.h1`
   font-family: "Signika", sans-serif;
   cursor: pointer;
 `;
-
+// right items section
 const RightItems = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
+// single icon container
 const IconContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -85,14 +88,17 @@ const IconContainer = styled.div`
   align-items: center;
 `;
 const Navbar = () => {
+  // personal github link
   const gitHubLink = "https://github.com/kaaf7";
+  // use navigate hook
   const navigate = useNavigate();
   const NavigateDir = (dir) => {
     navigate(dir);
   };
-
+  // scroll trigger
   gsap.registerPlugin(ScrollTrigger);
 
+  // navbar animation when scrolling down it disappears when scrolling up it shows up again
   useEffect(() => {
     let sectionAnimation = gsap.context(() => {
       const showAnim = gsap
