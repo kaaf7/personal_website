@@ -20,7 +20,6 @@ const ContactMeSection = styled.div`
   align-items: center;
   text-align: center;
 `;
-
 const IconContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -29,7 +28,6 @@ const IconContainer = styled.div`
   align-items: center;
   font-family: "Signika", sans-serif;
 `;
-
 const Icon = styled.div`
   margin-left: 1vh;
   margin-right: 1vh;
@@ -61,7 +59,6 @@ const Separator = styled.span`
 `;
 const Footer = () => {
   const gitHubLink = "https://github.com/kaaf7";
-
   return (
     <Container>
       <ContactMeSection>
@@ -81,6 +78,7 @@ const Footer = () => {
               GitHub
             </Icon>
           </a>
+          <Icon>Projects</Icon>
           <Icon>Contact</Icon>
         </IconContainer>
       </ContactMeSection>
