@@ -1,8 +1,20 @@
+/* * 👇
+ *This is Navbar Component
+ *Styled with styled components
+ *It navigates through the personal website
+ */
+
+// react
 import { React, useEffect } from "react";
+// navigate
 import { useNavigate } from "react-router-dom";
+//  import styled components
 import styled from "styled-components";
+// gsap scroll trgigger
 import { gsap, ScrollTrigger } from "gsap/all";
+// githubicon
 import GitHubIcon from "@mui/icons-material/GitHub";
+// linkedin icon
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Container = styled.div`
